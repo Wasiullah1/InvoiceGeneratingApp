@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1026141918171",
+    "project_id": "invoiceapp-b9458",
+    "storage_bucket": "invoiceapp-b9458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026141918171:android:d4b88fa0286817190e4dfe",
+        "android_client_info": {
+          "package_name": "com.example.invoiceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026141918171-1rpdc7japgemd0sss1k6f0qfhq14s41k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBam9C8mvLBhunB9qP-4fwylNjVrg7tOsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026141918171-1rpdc7japgemd0sss1k6f0qfhq14s41k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
