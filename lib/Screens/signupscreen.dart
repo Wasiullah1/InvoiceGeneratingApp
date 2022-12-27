@@ -142,7 +142,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             },
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.phone),
-                              hintText: '+923333333333',
+                              hintText: 'Contact',
                               labelText: 'Contact',
                               filled: true,
                               fillColor: Colors.white,

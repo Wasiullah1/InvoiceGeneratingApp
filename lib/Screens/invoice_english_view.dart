@@ -25,7 +25,7 @@ class InvoiceView_eng extends StatelessWidget {
       ),
       child: Container(
         margin: EdgeInsets.symmetric(
-            vertical: Dimensions.calcH(15), horizontal: Dimensions.calcW(8)),
+            vertical: Dimensions.calcH(12), horizontal: Dimensions.calcW(6)),
         padding: EdgeInsets.symmetric(
             vertical: Dimensions.calcH(4), horizontal: Dimensions.calcW(8)),
         height: Dimensions.calcH(135),
@@ -33,121 +33,123 @@ class InvoiceView_eng extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(18),
         ),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 6,
-                ),
-                Expanded(child: Image.memory(invoice.logo)),
-                SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  flex: 4,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: CustomText(
-                                text: "Vin#${invoice.id}",
-                                align: TextAlign.left,
-                                fontSize: Dimensions.calcH(21),
-                                weight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: CustomText(
-                                text: "Dealer name ${invoice.to.name}",
-                                align: TextAlign.left,
-                                fontSize: Dimensions.calcH(16),
-                                weight: FontWeight.w600,
-                                color: Colors.grey.withOpacity(0.6),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: CustomText(
-                                text: "${invoice.items}",
-                                align: TextAlign.left,
-                                fontSize: Dimensions.calcH(18),
-                                weight: FontWeight.w600,
-                                color: Colors.grey.withOpacity(0.6),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 6,
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Icon(
-                        Icons.download,
-                        size: Dimensions.calcH(30),
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(Icons.calendar_month),
-                SizedBox(
-                  width: 2,
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: CustomText(
-                      text: invoice.date,
-                      align: TextAlign.left,
-                      fontSize: Dimensions.calcH(15),
-                      weight: FontWeight.w600,
-                      color: Colors.grey.withOpacity(0.6),
+                  Expanded(child: Image.memory(invoice.logo)),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: CustomText(
+                                  text: "Vin#${invoice.id}",
+                                  align: TextAlign.left,
+                                  fontSize: Dimensions.calcH(21),
+                                  weight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: CustomText(
+                                  text: "Business name: ${invoice.from.name}",
+                                  align: TextAlign.left,
+                                  fontSize: Dimensions.calcH(16),
+                                  weight: FontWeight.w600,
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: CustomText(
+                                  text: "Dealer name: ${invoice.to.name}",
+                                  align: TextAlign.left,
+                                  fontSize: Dimensions.calcH(18),
+                                  weight: FontWeight.w600,
+                                  color: Colors.grey.withOpacity(0.6),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: CustomText(
-                      text: "Invoice#${invoice.id}",
-                      align: TextAlign.left,
-                      fontSize: Dimensions.calcH(14),
-                      weight: FontWeight.w600,
-                      color: Colors.grey.withOpacity(0.6),
+                  Expanded(
+                    child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Icon(
+                          Icons.download,
+                          size: Dimensions.calcH(30),
+                        )),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.calendar_month),
+                  SizedBox(
+                    width: 2,
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: CustomText(
+                        text: invoice.date,
+                        align: TextAlign.left,
+                        fontSize: Dimensions.calcH(15),
+                        weight: FontWeight.w600,
+                        color: Colors.grey.withOpacity(0.6),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: CustomText(
+                        text: "Invoice#${invoice.id}",
+                        align: TextAlign.left,
+                        fontSize: Dimensions.calcH(14),
+                        weight: FontWeight.w600,
+                        color: Colors.grey.withOpacity(0.6),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

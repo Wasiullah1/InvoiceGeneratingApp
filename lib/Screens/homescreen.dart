@@ -81,14 +81,16 @@ class HomeScreen extends GetView<AllInvoiceController> {
               ),
             );
           } else {
-            return Column(
-              children: [
-                ...controller.invoicesList
-                    .map((invoice) => InvoiceView_eng(
-                          invoice: invoice,
-                        ))
-                    .toList()
-              ],
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  ...controller.invoicesList
+                      .map((invoice) => InvoiceView_eng(
+                            invoice: invoice,
+                          ))
+                      .toList()
+                ],
+              ),
             );
           }
         }));

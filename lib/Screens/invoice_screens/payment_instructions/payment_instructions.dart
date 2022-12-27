@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invoiceapp/Components/colors.dart';
@@ -54,7 +53,7 @@ class PaymentInstructions extends GetView<InvoiceController> {
                     Get.close(1);
                   }
                 },
-                color: AppColors.kPrimaryColor,
+                color: AppColors.kSecondaryColor,
                 textColor: Colors.white,
                 width: Dimensions.calcW(150),
               )

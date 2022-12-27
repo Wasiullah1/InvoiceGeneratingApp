@@ -111,43 +111,44 @@ class NewItemScreen extends GetView<ItemsController> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.defaultDialog(
-            title: AppStrings.ADD_ITEMS_DIALOG_TITLE,
-            content: SingleChildScrollView(
-              child: Column(
-                children: [
-                  const Divider(),
-                  CustomInput_eng(
-                    label: "Item name",
-                    controller: controller.itemNameInputController,
+              title: AppStrings.ADD_ITEMS_DIALOG_TITLE,
+              content: Flexible(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const Divider(),
+                      CustomInput_eng(
+                        label: "Item name",
+                        controller: controller.itemNameInputController,
+                      ),
+                      CustomInput_eng(
+                          label: AppStrings.ADD_ITEMS_PRICE,
+                          controller: controller.itemPriceInputController,
+                          type: TextInputType.number),
+                      CustomInput_eng(
+                        label: AppStrings.ADD_ITEMS_QTY,
+                        controller: controller.itemQtyInputController,
+                        type: TextInputType.number,
+                      ),
+                      CustomBtn(
+                        label: AppStrings.ADD_BTN,
+                        action: () {
+                          bool isValid = controller.validate();
+                          if (isValid) {
+                            Get.close(1);
+                          }
+                        },
+                        color: AppColors.kSecondaryColor,
+                        textColor: Colors.white,
+                      ),
+                    ],
                   ),
-                  CustomInput_eng(
-                      label: AppStrings.ADD_ITEMS_PRICE,
-                      controller: controller.itemPriceInputController,
-                      type: TextInputType.number),
-                  CustomInput_eng(
-                    label: AppStrings.ADD_ITEMS_QTY,
-                    controller: controller.itemQtyInputController,
-                    type: TextInputType.number,
-                  ),
-                  CustomBtn(
-                    label: AppStrings.ADD_BTN,
-                    action: () {
-                      bool isValid = controller.validate();
-                      if (isValid) {
-                        Get.close(1);
-                      }
-                    },
-                    color: AppColors.kPrimaryColor,
-                    textColor: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-          );
+                ),
+              ));
         },
         child: Icon(
           Icons.add,
-          color: AppColors.kPrimaryColor,
+          color: AppColors.kSecondaryColor,
           size: 35,
         ),
         backgroundColor: AppColors.kPrimaryColor,

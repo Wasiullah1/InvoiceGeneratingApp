@@ -56,7 +56,7 @@ class SignatureScreen extends GetView<InvoiceController> {
                     controller.setSignature(pngBytes!);
                     Get.back();
                   },
-                  color: AppColors.kPrimaryColor,
+                  color: AppColors.kSecondaryColor,
                   textColor: Colors.white,
                 ),
                 CustomBtn(

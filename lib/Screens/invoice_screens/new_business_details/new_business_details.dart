@@ -12,10 +12,9 @@ import 'package:invoiceapp/Controller/business_controller.dart';
 import 'package:invoiceapp/Screens/invoice_screens/new_invoice.dart';
 import 'package:invoiceapp/Screens/shared_widgets/appbar_eng_view.dart';
 import 'package:invoiceapp/Screens/shared_widgets/custom_btn.dart';
-import 'package:invoiceapp/Screens/shareds_widgets/custom_input_eng.dart';
+import 'package:invoiceapp/Screens/shared_widgets/custom_input_eng.dart';
 import 'package:invoiceapp/Screens/shared_widgets/custom_text.dart';
 import 'package:invoiceapp/env/dimensions.dart';
-import 'package:invoiceapp/Models/business_model.dart';
 
 class NewBusinessScreen extends StatelessWidget {
   var scanResult;

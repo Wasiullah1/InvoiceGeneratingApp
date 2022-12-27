@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invoiceapp/Components/colors.dart';
@@ -76,7 +75,7 @@ class NewPayerScreen extends StatelessWidget {
                           Get.back();
                         }
                       },
-                      color: AppColors.kPrimaryColor,
+                      color: AppColors.kSecondaryColor,
                       textColor: Colors.white,
                       width: Dimensions.calcW(150),
                     )
