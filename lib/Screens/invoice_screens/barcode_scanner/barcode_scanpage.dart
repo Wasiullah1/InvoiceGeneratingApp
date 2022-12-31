@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class BarcodeScan extends StatefulWidget {
